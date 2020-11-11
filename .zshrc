@@ -15,7 +15,7 @@
 
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH:/Users/mkfsn/Repository/gocode/bin"
 
-ZSH=$HOME/dotfiles/.zsh
+ZSH=$HOME/.zsh
 #export ZSH_THEME="miloshadzic"
 #export ZSH_THEME="norm"
 #export ZSH_THEME="funky"
@@ -47,7 +47,7 @@ echo "Loading oh-my-zsh settings...."
 source $ZSH/oh-my-zsh.sh
 #website:   http://mimosa-pudica.net/zsh-incremental.html
 #file link: http://mimosa-pudica.net/src/incr-0.2.zsh
-#source ~/dotfiles/incr-0.2.zsh
+#source ~/incr-0.2.zsh
 
 
 # alias commands
@@ -68,23 +68,21 @@ alias tmux='DISPLAY=:0.0 TERM=screen-256color tmux -2'
 alias screen='DISPLAY=:0.0 TERM=xterm-256color screen'
 
 #my zsh_completion
-fpath=($HOME/dotfiles/zsh_completion $fpath)
+fpath=($HOME/zsh_completion $fpath)
 autoload -U compinit
 compinit
 
 
 # keymap
 # https://wiki.archlinux.org/index.php/Zsh#Key_bindings
-[[ -s "$HOME/dotfiles/.myenvvar"  ]] && source "$HOME/dotfiles/.myenvvar"
+[[ -s "$HOME/.myenvvar"  ]] && source "$HOME/.myenvvar"
 
 # nvm, rvm, virtualenv
-#source $HOME/dotfiles/samuel_py_rc
-#source $HOME/dotfiles/samuel_node_rc
-#source $HOME/dotfiles/samuel_ruby_rc
+#source $HOME/samuel_py_rc
+#source $HOME/samuel_node_rc
+#source $HOME/samuel_ruby_rc
 #echo ""
 [[ -s "/usr/bin/screenfetch"  ]] && screenfetch
-
-source $HOME/.gvm/scripts/gvm
 
 [ -f $HOME/.glasnostic ] && source $HOME/.glasnostic
 
